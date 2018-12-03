@@ -14,13 +14,13 @@ public class Solution {
     private static List<String> getInput(){
         List<String> listString = new ArrayList<>();
         try{
-            File file = new File("/Users/charlie.say/PersonalProjects/CharlieSay/src/main/resources/DAY1/DAY1_INPUT.txt");
+            File file = new File(Solution.class.getResource("/DAY1/DAY1_INPUT.txt").toURI());
             BufferedReader br = new BufferedReader(new FileReader(file));
             String st;
             while ((st = br.readLine()) != null){
                 listString.add(st);
             }
-        }catch(Exception e){}
+        }catch(Exception e){ }
         return listString;
     }
 
